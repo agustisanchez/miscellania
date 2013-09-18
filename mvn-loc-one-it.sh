@@ -5,5 +5,5 @@ then
    echo "Not enough arguments"
    exit 1
 fi
-mvn -Pintegration -DgeogrepConfigurationTarget=devtest -DfailIfNoTests=false -am -pl gp-location-rest -Dit.test=$1 verify > mvn.out 2>&1
+mvn -Pintegration -DgeogrepConfigurationTarget=devtest -DfailIfNoTests=false -am -pl geo-rest -Dit.test=$1 verify > mvn.out 2>&1
 
