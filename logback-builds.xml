@@ -1,0 +1,21 @@
+<configuration>
+
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+         <pattern>%d{HH:mm:ss} [%X{contextPath}][%X{user}][%X{role}][%thread] %-5level %logger{36} - %msg%n</pattern>
+      </encoder>
+   </appender>
+
+   <!-- Print SQL statements -->
+   <logger name="org.eclipse.persistence.logging.sql" level="INFO" />
+   <logger name="org.springframework" level="WARN" />
+   <logger name="org.springframework.transaction" level="WARN" />
+   <logger name="com.geogrep.commons.core.multitenancy" level="INFO" />
+   <logger name="com.geogrep.commons.rest.support.RESTfulExceptionHandler" level="DEBUG" />
+   <logger name="com.geogrep.commons.rest.auth" level="INFO" />
+
+   <root level="INFO">
+      <appender-ref ref="STDOUT" />
+   </root>
+
+</configuration>
