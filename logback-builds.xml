@@ -1,4 +1,4 @@
-<configuration>
+<configuration scan="true" scanPeriod="30 seconds">
 
    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
       <encoder>
@@ -7,7 +7,7 @@
    </appender>
 
    <!-- Print SQL statements -->
-   <logger name="org.eclipse.persistence.logging.sql" level="INFO" />
+   <logger name="org.eclipse.persistence.logging" level="DEBUG" />
    <logger name="org.springframework" level="WARN" />
    <logger name="org.springframework.transaction" level="WARN" />
    <logger name="com.geogrep.commons.core.multitenancy" level="INFO" />
