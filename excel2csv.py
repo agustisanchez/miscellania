@@ -3,9 +3,9 @@
 """
 import codecs
 
-with codecs.open("prom94.csv", "r", "iso-8859-1") as fInput:
+with codecs.open("input.csv", "r", "iso-8859-1") as fInput:
     data = fInput.readlines()
-with codecs.open("test.csv", "w", "iso-8859-1") as fOutput:
+with codecs.open("output.csv", "w", "iso-8859-1") as fOutput:
     for line in data:
         values = line.split(';')
         fOutput.write('"')
