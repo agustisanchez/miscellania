@@ -20,5 +20,6 @@ if [ -e "$nom" ]
 then
         rm -v $nom
 fi
-git clone --depth 1 --branch $tag git@gitlab.com:sabart/Project1B.git $TMPDIR( cd $TMPDIR; zip -qr ${nom} . -x .\*  )
+git clone --depth 1 --branch $tag git@gitlab.com:<user>/<project>.git $TMPDIR
+( cd $TMPDIR; zip -qr ${nom} . -x .\*  )
 echo "${nom}"
